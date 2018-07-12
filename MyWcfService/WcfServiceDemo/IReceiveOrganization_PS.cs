@@ -8,11 +8,12 @@ using System.Text;
 
 namespace WcfServiceDemo
 {
-    // 注意: 使用“重构”菜单上的“重命名”命令，可以同时更改代码和配置文件中的接口名“IService1”。
-    [ServiceContract]
-    public interface IService1
+    // 注意: 使用“重构”菜单上的“重命名”命令，可以同时更改代码和配置文件中的接口名“IReceiveOrganization_PS”。
+    [ServiceContract ]
+    
+    public interface IReceiveOrganization_PS
     {
-
+        
         [OperationContract]
         string GetData(int value);
 
@@ -20,6 +21,10 @@ namespace WcfServiceDemo
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: 在此添加您的服务操作
+        [OperationContract]
+        void ReceiveOrganization(String ORGID, String ORGNAME, String ORGTYPE, String ORGPID, String STATE, String COMPID, String ORGAREA, String MANAGERID, out string RESULT, out string MESSAGE);
+
+
     }
 
 
